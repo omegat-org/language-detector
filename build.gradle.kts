@@ -23,7 +23,7 @@ dependencies {
 }
 
 group = "org.omegat"
-version = "0.7-SNAPSHOT"
+version = "0.6-1"
 description = "language-detector"
 
 java {
