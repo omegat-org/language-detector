@@ -112,6 +112,7 @@ public class LanguageProfileReader {
     }
 
     @NotNull
+    @SuppressWarnings("unused")
     public List<LanguageProfile> readBuiltIn(@NotNull Collection<LdLocale> languages) throws IOException {
         List<String> profileNames = new ArrayList<>();
         for (LdLocale locale : languages) {
@@ -140,7 +141,7 @@ public class LanguageProfileReader {
 
     /**
      * Loads all profiles from the specified directory.
-     *
+     * <p>
      * Do not use this method for files distributed within a jar.
      *
      * @param path profile directory path
@@ -153,12 +154,7 @@ public class LanguageProfileReader {
         if (!path.canRead()) {
             throw new IOException("Folder not readable: "+path);
         }
-        File[] listFiles = path.listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File pathname) {
-                return looksLikeLanguageProfileFile(pathname);
-            }
-        });
+        File[] listFiles = path.listFiles(this::looksLikeLanguageProfileFile);
         if (listFiles == null) {
             throw new IOException("Failed reading from folder: " + path);
         }

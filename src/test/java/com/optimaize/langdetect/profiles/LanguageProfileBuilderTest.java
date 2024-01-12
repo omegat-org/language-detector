@@ -27,6 +27,7 @@ import static org.junit.Assert.*;
 public class LanguageProfileBuilderTest {
 
     @Test
+    @Deprecated
     public void german() throws Exception {
         TextObjectFactory textObjectFactory = CommonTextObjectFactories.forIndexing();
 
@@ -45,6 +46,7 @@ public class LanguageProfileBuilderTest {
     }
 
     @Test
+    @Deprecated
     public void profile_equals() throws Exception {
         LanguageProfile languageProfile1 = new LanguageProfileBuilder("de")
                 .addGram("foo", 1)
@@ -63,6 +65,7 @@ public class LanguageProfileBuilderTest {
     }
 
     @Test
+    @Deprecated
     public void profile_toString() throws Exception {
         LanguageProfile languageProfile = new LanguageProfileBuilder("de")
                 .addGram("foo", 1)
