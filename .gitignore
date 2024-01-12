@@ -1,3 +1,14 @@
 /target
 /language-detector.iml
 .idea/
+
+# Gradle
+build
+.gradle
+.settings
+.project
+.classpath
+bin
+out
+.nb-gradle
+local.properties

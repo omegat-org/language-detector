@@ -24,6 +24,7 @@ import com.optimaize.langdetect.cybozu.util.CharNormalizer;
  * @author Fabian Kessler
  * @deprecated can't be used because it would be a big loss to not inline this code.
  */
+@Deprecated
 public class CharNormalizerTextFilterImpl implements TextFilter {
 
     @Override

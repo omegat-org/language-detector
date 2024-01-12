@@ -123,6 +123,7 @@ public class LanguageProfileReader {
     /**
      * @deprecated renamed to readAllBuiltIn()
      */
+    @Deprecated
     public List<LanguageProfile> readAll() throws IOException {
         return readAllBuiltIn();
     }
