@@ -1,13 +1,27 @@
 # language-detector
 
+A fork of language-detector project to maintain for OmegaT.
+
+## changes
+
+- Build against Java 11 or later
+- Bump dependencies
+    - guava@32.0.0-jre
+    - jetbrains-annotations@23.0.0
+    - slf4j@2.0.7
+- Add Automatic-Module-Name as "org.omegat.languagedetector"
+
+## Usage
+
 Language Detection Library for Java
 
+```
     <dependency>
-        <groupId>com.optimaize.languagedetector</groupId>
+        <groupId>org.omegat</groupId>
         <artifactId>language-detector</artifactId>
-        <version>0.6</version>
+        <version>0.6-1</version>
     </dependency>
-
+```
 
 ## Language Support
 
