@@ -10,10 +10,10 @@ repositories {
 }
 
 dependencies {
-    api("net.arnx:jsonic:1.2.11")
-    api("org.jetbrains:annotations:23.0.0")
-    api("com.google.guava:guava:32.0.0-jre")
-    api("org.slf4j:slf4j-api:2.0.7")
+    implementation("net.arnx:jsonic:1.2.11")
+    implementation("org.jetbrains:annotations:23.0.0")
+    implementation("com.google.guava:guava:32.1.2-jre")
+    implementation("org.slf4j:slf4j-api:2.0.7")
     testImplementation("org.testng:testng:7.7.0")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.hamcrest:hamcrest-core:1.3")
