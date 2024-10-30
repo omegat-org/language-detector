@@ -51,7 +51,7 @@ publishing {
                 licenses {
                     license {
                         name.set("Apache License, Version 2.0")
-                        url.set("https://http://www.apache.org/licenses/")
+                        url.set("https://www.apache.org/licenses/")
                         distribution.set("repo")
                     }
                 }
