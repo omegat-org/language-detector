@@ -2,7 +2,7 @@ plugins {
     `java-library`
     `maven-publish`
     signing
-    id("io.github.gradle-nexus.publish-plugin") version  "2.0.0-rc-1"
+    alias(libs.plugins.nexus.publish)
 }
 
 repositories {
@@ -10,16 +10,16 @@ repositories {
 }
 
 dependencies {
-    implementation("net.arnx:jsonic:1.2.11")
-    implementation("org.jetbrains:annotations:23.0.0")
-    implementation("com.google.guava:guava:32.1.2-jre")
-    implementation("org.slf4j:slf4j-api:2.0.7")
-    testImplementation("org.testng:testng:7.7.0")
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.hamcrest:hamcrest-core:1.3")
-    testImplementation("org.hamcrest:hamcrest-library:1.3")
-    testImplementation("org.mockito:mockito-all:1.9.5")
-    testImplementation("ch.qos.logback:logback-classic:1.4.12")
+    implementation(libs.jsonic)
+    implementation(libs.jetbrains.annotations)
+    implementation(libs.guava)
+    implementation(libs.slf4j.api)
+    testImplementation(libs.testng)
+    testImplementation(libs.junit4)
+    testImplementation(libs.hamcrest.core)
+    testImplementation(libs.hamcrest.library)
+    testImplementation(libs.mockito)
+    testImplementation(libs.logback)
 }
 
 group = "org.omegat"
@@ -112,12 +112,6 @@ signing {
             useInMemoryPgpKeys(signingKey, signingPassword)
         }
         "signing.keyId" -> {
-            // default signatory - do nothing()
-            // please set
-            // signing.keyId = 0xAAAAAA
-            // signing.password = "signature passphrase"
-            // secretKeyRingFile = "secring.gpg"
-            // e.g. gpg --export-secret-keys > secring.gpg
         }
         "signing.gnupg.keyName" -> {
             useGpgCmd()

@@ -1,0 +1,30 @@
+[versions]
+slf4j = { strictly = "[2.0.7, 2.1[", prefer = "2.0.7" }
+junit = "4.13.2"
+slf4j_format = "0.5.1"
+guava = "32.1.2-jre"
+jetbrains_annotations = "23.1.0"
+testng = "7.7.0"
+hamcrest = "1.3"
+mockito = "1.9.5"
+logback = "1.4.12"
+jsonic = "1.2.11"
+
+[libraries]
+jsonic = {group = "net.arnx", name = "jsonic", version.ref = "jsonic"}
+slf4j-api = {group = "org.slf4j", name = "slf4j-api",  version.ref = "slf4j"}
+slf4j-format-jdk14 ={group = "tokyo.northside", name = "slf4j-format-jdk14",  version.ref = "slf4j_format"}
+guava = {group = "com.google.guava", name = "guava", version.ref = "guava"}
+jetbrains-annotations = {group = "org.jetbrains", name = "annotations", version.ref = "jetbrains_annotations"}
+slf4j-simple = {group = "org.slf4j", name = "slf4j-simple",  version.ref = "slf4j"}
+junit4 = {group = "junit", name = "junit", version.ref = "junit"}
+testng = {group = "org.testng", name = "testng", version.ref = "testng"}
+hamcrest-core = {group = "org.hamcrest", name = "hamcrest-core", version.ref = "hamcrest"}
+hamcrest-library = {group = "org.hamcrest", name = "hamcrest-library", version.ref = "hamcrest"}
+mockito = {group = "org.mockito", name = "mockito-all", version.ref = "mockito"}
+logback = {group = "ch.qos.logback", name = "logback-classic", version.ref = "logback"}
+
+[plugins]
+nexus-publish = {id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0"}
+spotbugs = {id = "com.github.spotbugs", version = "6.0.24"}
+spotless = {id = "com.diffplug.spotless", version = "6.25.0"}
